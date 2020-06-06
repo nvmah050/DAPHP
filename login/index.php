@@ -1,3 +1,52 @@
+<?php
+session_start();
+require_once __DIR__. "/../libraries/Database.php";
+require_once __DIR__. "/../libraries/Function.php";
+$db = new Database;
+$error = [];
+
+$data =
+[
+	"email" => postInput("email"),
+	"password" => md5(postInput("password"))
+];
+
+if ($_SERVER['REQUEST_METHOD'] == "POST")
+{
+	
+
+	
+	if($data['email']=='')
+	{
+		$error['email'] = "Bạn chưa nhập Email";
+	}
+	if($data['password']=='')
+	{
+		$error['password'] = "Bạn chưa nhập mật khẩu";
+	}
+	
+	//không có lỗi xảy ra
+	if (empty($error))
+	{
+		//$data['password'] = md5($data['password']);
+		$is_check = $db->fetchOne("admin", " email = '".$data['email']."' AND password = '".$data['password']."'");
+		// _debug($is_check);
+		if ($is_check != null)
+		{
+			$_SESSION['admin_name'] = $is_check['email'];
+			$_SESSION['admin_id'] = $is_check['id'];
+			echo "<script>alert('Đăng nhập thành công'); location.href='/tutphp/admin/'</script>";
+		}
+		else
+		{
+			//Đăng nhập thất bại
+			echo "<script>alert('Sai Email hoặc mật khẩu. Vui lòng kiểm tra lại');</script>";
+		}
+	}	
+}
+?>
+
+
 <header>
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" type="text/css" href="../public/frontend/css/font-awesome.min.css">
