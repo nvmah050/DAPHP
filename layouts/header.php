@@ -81,7 +81,7 @@
                         </div>
                         <div class="col-md-4">
                             <a href="">
-                                <img src="<?php echo base_url() ?>public/frontend/images/logo-default1.png">
+                                <img src="<?php echo base_url() ?>public/frontend/images/1.png">
                             </a>
                         </div>
                         <div class="col-md-3" id="header-right">
