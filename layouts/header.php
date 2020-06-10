@@ -25,7 +25,7 @@
                     <div class="container">
                         <div class="row clearfix">
                             <div class="col-md-6" id="header-text">
-                                <a>Trần Sang</a><b>Chào mừng bạn đến với SANGSHOP :D </b>
+                                <a>King Mobile</a><b>Chào mừng bạn đến với KING MOBILE :D </b>
                             </div>
                             <div class="col-md-6">
                                 <nav id="header-nav-top">
@@ -79,9 +79,9 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 logo">
                             <a href="">
-                                <img src="<?php echo base_url() ?>public/frontend/images/1.png">
+                                <img class="imgLogo" src="<?php echo base_url() ?>public/frontend/images/1.png">
                             </a>
                         </div>
                         <div class="col-md-3" id="header-right">

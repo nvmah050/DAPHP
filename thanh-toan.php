@@ -45,7 +45,7 @@
 		        	<div class="form-group">
 		        			<label class="col-md-2 col-md-offset-1" style="margin-top: 8px">Tên Thành Viên: </label>
 		        			<div class="col-md-5">
-		        				<input type="text" readonly="" name="name" placeholder="Trần Sang!" class="form-control" value="<?php echo $user['name'] ?>">
+		        				<input type="text" readonly="" name="name" placeholder="King Mobile!" class="form-control" value="<?php echo $user['name'] ?>">
 		        				
 		        			</div>
 		        	</div>

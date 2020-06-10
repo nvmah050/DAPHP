@@ -80,7 +80,7 @@
         	<div class="form-group">
         			<label class="col-md-2 col-md-offset-1" style="margin-top: 8px">Tên Thành Viên: </label>
         			<div class="col-md-5">
-        				<input type="text" name="name" placeholder="Trần Sang!" class="form-control" value="<?php echo $data['name'] ?>">
+        				<input type="text" name="name" placeholder="King Mobile!" class="form-control" value="<?php echo $data['name'] ?>">
         				<?php if (isset($error['name'])): ?>
 							<p class="text-danger" style="margin-top: 5px" style="margin-bottom: -10"><?php echo $error['name'] ?></p>
 						<?php endif ?>
